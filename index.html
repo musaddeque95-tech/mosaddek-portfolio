@@ -4,9 +4,22 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Md Mosaddek Billah — Psychology student at Rajshahi College, website designer and AI video creator from Bangladesh." />
-<link rel="icon" href="data:," />
-<title>Md Mosaddek Billah — Portfolio</title>
+<meta name="description" content="Md Mosaddek Billah's personal portfolio: psychology student, website designer and AI video creator from Rajshahi, Bangladesh. Explore skills, education, creative work and contact details." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Md Mosaddek Billah" />
+<meta name="theme-color" content="#14663c" />
+<link rel="canonical" href="https://musaddeque95-tech.github.io/mosaddek-portfolio/" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="alternate icon" href="./favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Md Mosaddek Billah — Portfolio" />
+<meta property="og:description" content="Psychology student, website designer and AI video creator from Rajshahi, Bangladesh." />
+<meta property="og:url" content="https://musaddeque95-tech.github.io/mosaddek-portfolio/" />
+<meta property="og:site_name" content="Md Mosaddek Billah Portfolio" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Md Mosaddek Billah — Portfolio" />
+<meta name="twitter:description" content="Explore the portfolio, skills, education and contact details of Md Mosaddek Billah." />
+<title>Md Mosaddek Billah | Portfolio, Web Design & AI Video</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -239,7 +252,40 @@
   .map-side p{color:var(--ink-soft);margin:0 0 14px;max-width:46ch}
   .map-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
   .map-chips span{font-size:14px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);padding:6px 13px;border-radius:999px;color:var(--ink-soft)}
+ 
+  /* Additional mobile polish */
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+  @media(max-width:560px){
+    .hero{padding-top:32px}
+    .hero p.lead{font-size:17px}
+    .btn{width:100%;justify-content:center}
+    .hero-actions{display:grid;grid-template-columns:1fr}
+    .card,.skill,.contact-card{padding:20px}
+    .photo-frame img{height:360px}
+    .photo-chip{left:10px;right:10px;bottom:10px;padding:11px}
+    .stats-grid{gap:10px}
+    .stat{padding:16px}
+    .stat b{font-size:26px}
+    section{padding-top:42px}
+    .edu{padding:18px}
+    .contact-row{gap:12px}
+    .copy-btn{padding:7px 10px}
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Md Mosaddek Billah",
+  "url": "https://musaddeque95-tech.github.io/mosaddek-portfolio/",
+  "description": "Psychology student, website designer and AI video creator from Rajshahi, Bangladesh.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rajshahi",
+    "addressCountry": "BD"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -252,7 +298,7 @@
         <span class="brand-sub" style="display:block">Psychology Student · Rajshahi College</span>
       </span>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks" aria-label="Main">
       <a href="#about">About</a>
       <a href="#education">Education</a>
@@ -522,7 +568,7 @@
     var navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', function(){
       var open = navLinks.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');\n      menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
       menuBtn.textContent = open ? '✕' : '☰';
     });
     navLinks.addEventListener('click', function(e){

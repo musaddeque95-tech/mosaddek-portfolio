@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://musaddeque95-tech.github.io/mosaddek-portfolio/sitemap.xml
