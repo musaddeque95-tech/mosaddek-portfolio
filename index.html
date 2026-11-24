@@ -569,8 +569,8 @@
     var navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', function(){
       var open = navLinks.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');\n      menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-      menuBtn.textContent = open ? '✕' : '☰';
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     });
     navLinks.addEventListener('click', function(e){
       if(e.target.tagName === 'A'){
